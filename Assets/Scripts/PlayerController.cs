@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public float mouseSensitivity = 70f;
     private float xRotation = 0f;
+    //private float yRotation = 0f;
     public float groundDistance = 0.4f; //radius of sphere going to check to see if on ground
     public float speed = 12f;
     public float gravity = -9.81f * 2; //towards 0 = slower fall, further negative = faster fall
@@ -72,10 +73,13 @@ public class PlayerController : MonoBehaviour
     private void Look() {
         float mouseX = looking.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
         float mouseY = looking.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
+        //yRotation -= mouseX;
         xRotation -= mouseY;
+        //yRotation = Mathf.Clamp(yRotation, 0f, 0f);
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         cam.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * looking.ReadValue<Vector2>().x);
+        //playerBody.Rotate(Vector3.up * looking.ReadValue<Vector2>().x);
+        playerBody.Rotate(Vector3.up * mouseX);
     }
 
     private void Move() {

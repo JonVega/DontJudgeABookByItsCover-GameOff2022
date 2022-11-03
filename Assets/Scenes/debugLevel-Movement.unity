@@ -754,6 +754,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 360973571958172960, guid: 275c8cb4e3ff1c145a9198d184562ec9, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 360973571958172960, guid: 275c8cb4e3ff1c145a9198d184562ec9, type: 3}
+      propertyPath: gravity
+      value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 360973571958172960, guid: 275c8cb4e3ff1c145a9198d184562ec9, type: 3}
+      propertyPath: jumpHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 360973571958172960, guid: 275c8cb4e3ff1c145a9198d184562ec9, type: 3}
+      propertyPath: mouseSensitivity
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 360973571958172961, guid: 275c8cb4e3ff1c145a9198d184562ec9, type: 3}
       propertyPath: m_DefaultControlScheme
       value: 
